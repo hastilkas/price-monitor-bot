@@ -1,0 +1,124 @@
+{
+ "products": [
+  {
+   "id": 839226871,
+   "root": 2362405143,
+   "kindId": 0,
+   "brand": "TehnoVolna",
+   "brandId": 311123295,
+   "siteBrandId": 0,
+   "colors": [
+    {
+     "name": "белый",
+     "id": 16777215
+    }
+   ],
+   "subjectId": 593,
+   "subjectParentId": 6258,
+   "name": "Наушники беспроводные TWS Pro 2",
+   "entity": "",
+   "matchId": 542197285,
+   "supplier": "Me TradeMark",
+   "supplierId": 1174666,
+   "supplierRating": 5,
+   "supplierFlags": 274416,
+   "pics": 7,
+   "picsUpdate": 10,
+   "rating": 5,
+   "reviewRating": 5,
+   "feedbacks": 134628,
+   "panelPromoId": 1061548,
+   "volume": 11,
+   "weight": 0.277,
+   "viewFlags": 548864,
+   "mtype": 1025,
+   "promotions": [
+    183297,
+    1000058,
+    1001612
+   ],
+   "sizes": [
+    {
+     "name": "",
+     "origName": "0",
+     "rank": 0,
+     "optionId": 1260077136,
+     "stocks": [
+      {
+       "wh": 8030086722,
+       "dtype": 6614249635848,
+       "ndtype": 197124,
+       "dist": 211,
+       "qty": 49,
+       "priority": 94644,
+       "time1": 3,
+       "time2": 25
+      }
+     ],
+     "time1": 3,
+     "time2": 25,
+     "wh": 8030086722,
+     "dtype": 6614249635848,
+     "ndtype": 197124,
+     "dist": 211,
+     "price": {
+      "basic": 252500,
+      "product": 159200,
+      "logistics": 0,
+      "return": 0,
+      "cashback": 0,
+      "wallet": 0
+     },
+     "saleConditions": 2583691264
+    }
+   ],
+   "totalQuantity": 49,
+   "time1": 3,
+   "time2": 25,
+   "wh": 8030086722,
+   "dtype": 6614249635848,
+   "ndtype": 197124,
+   "dist": 211
+  },
+  {
+   "id": 169684889,
+   "root": 155345662,
+   "kindId": 0,
+   "brand": "LEDKULT",
+   "brandId": 312269858,
+   "siteBrandId": 0,
+   "colors": [],
+   "subjectId": 2754,
+   "subjectParentId": 8891,
+   "name": "Лампы светодиодные автомобильные с цоколем H4",
+   "entity": "",
+   "matchId": 172973623,
+   "supplier": "CarStore52",
+   "supplierId": 496363,
+   "supplierRating": 4.7,
+   "supplierFlags": 274368,
+   "pics": 12,
+   "picsUpdate": 0,
+   "rating": 5,
+   "reviewRating": 4.8,
+   "feedbacks": 1705,
+   "volume": 5,
+   "weight": 0.2,
+   "viewFlags": 134766608,
+   "promotions": [
+    1012879,
+    1052231
+   ],
+   "sizes": [
+    {
+     "name": "",
+     "origName": "0",
+     "rank": 0,
+     "optionId": 281904003,
+     "stocks": []
+    }
+   ],
+   "totalQuantity": 0
+  }
+ ]
+}

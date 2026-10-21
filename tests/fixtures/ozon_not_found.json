@@ -1,0 +1,17 @@
+{
+ "pageInfo": {
+  "url": "/search/?deny_category_prediction=true&from_global=true&product_id=123456789&text=",
+  "layoutId": 3473,
+  "layoutVersion": 281,
+  "pageType": "search",
+  "ruleId": 1088,
+  "referer": "https://www.ozon.ru/",
+  "pageTypeTracking": "search",
+  "analyticsInfo": {
+   "sku": 123456789
+  }
+ },
+ "widgetStates": {
+  "webOutOfStock-13545189-default-1": "{\"text\":{\"textColor\":\"textPrimary\",\"maxLines\":2,\"preset\":\"PRESET_CUSTOM\",\"typographyToken\":\"tsBody400Small\"},\"image\":{\"aspectRatio\":\"RATIO_3_4\",\"cornerRadius\":\"RADIUS_500\",\"imageWidth\":56,\"cdnSettings\":{\"size\":100}},\"common\":{\"action\":{\"behavior\":\"BEHAVIOR_TYPE_REDIRECT\",\"link\":\"/product/123456789/?oos_search=false\"},\"trackingInfo\":{\"click\":{\"actionType\":\"click\",\"key\":\"1hSp1VuIXIANnvQvhUGP_SrAdFg3y5Fa\"}},\"testInfo\":{\"automatizationId\":\"webOutOfStock\"}},\"trackingInfo\":{\"view\":{\"actionType\":\"view\",\"key\":\"1hSp1VuIXIANnvQvhUGP_SrAdFg3y5Fa\"}},\"icon\":{\"size\":\"SIZE_500\",\"shape\":\"SHAPE_NONE\",\"icon\":{\"icon\":\"ic_m_chevron_right_filled\",\"tintColor\":\"graphicTertiary\"}}}"
+ }
+}

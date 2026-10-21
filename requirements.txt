@@ -1,0 +1,9 @@
+aiogram==3.31.0
+aiosqlite==0.22.1
+curl_cffi==0.16.3
+matplotlib==3.10.9
+openpyxl==3.1.5
+patchright==1.64.1
+pillow==12.3.0
+python-dotenv==1.2.4
+tzdata==2026.5

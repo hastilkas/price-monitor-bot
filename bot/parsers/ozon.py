@@ -12,11 +12,16 @@ import logging
 import random
 import time
 
-from curl_cffi.requests import AsyncSession
-
 from ..links import parse_product_url
 from ..models import Marketplace, ProductRef, Snapshot
-from .base import Blocked, FetchResult, ParserError, ProductNotFound, parse_rub
+from .base import (
+    Blocked,
+    FetchResult,
+    HttpClient,
+    ParserError,
+    ProductNotFound,
+    parse_rub,
+)
 from .browser import BrowserManager
 
 log = logging.getLogger(__name__)
@@ -78,7 +83,7 @@ class OzonParser:
     def __init__(self, browser: BrowserManager, *, proxy: str | None = None, delay: tuple[float, float] = (1, 3)):
         self.browser = browser
         self.delay = delay
-        self._http = AsyncSession(impersonate="chrome", proxy=proxy, timeout=25)
+        self._http = HttpClient(proxy=proxy)
         self._cookies: dict[str, str] = {}
         self._cookies_at = 0.0
         self._lock = asyncio.Lock()

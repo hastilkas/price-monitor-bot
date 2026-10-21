@@ -12,10 +12,8 @@ import logging
 import time
 import uuid
 
-from curl_cffi.requests import AsyncSession
-
 from ..models import Marketplace, ProductRef, Snapshot
-from .base import Blocked, FetchResult, ParserError, ProductNotFound
+from .base import Blocked, FetchResult, HttpClient, ParserError, ProductNotFound
 from .browser import BrowserManager
 
 log = logging.getLogger(__name__)
@@ -72,7 +70,7 @@ class WildberriesParser:
     def __init__(self, browser: BrowserManager, *, dest: int = -1257786, proxy: str | None = None) -> None:
         self.browser = browser
         self.dest = dest
-        self._http = AsyncSession(impersonate="chrome", proxy=proxy, timeout=20)
+        self._http = HttpClient(proxy=proxy)
         self._cookies: dict[str, str] = {}
         self._token_at = 0.0
         self._device_id = "site_" + uuid.uuid4().hex

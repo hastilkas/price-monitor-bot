@@ -3,6 +3,9 @@ from __future__ import annotations
 import re
 from typing import Protocol
 
+from curl_cffi.requests import AsyncSession
+from curl_cffi.requests.exceptions import RequestException
+
 from ..models import Marketplace, ProductRef, Snapshot
 
 
@@ -42,3 +45,27 @@ def parse_rub(text: str | int | float | None) -> int | None:
         return round(text)
     digits = _NOT_DIGITS.sub("", text.split(",")[0])
     return int(digits) if digits else None
+
+
+class HttpClient:
+    """HTTP-клиент с TLS-отпечатком Chrome. Если соединение повисло или оборвалось —
+    один повтор через новую сессию: площадки молча рвут долгие keep-alive соединения."""
+
+    def __init__(self, *, proxy: str | None = None, timeout: float = 15) -> None:
+        self._proxy = proxy
+        self._timeout = timeout
+        self._session = self._new_session()
+
+    def _new_session(self) -> AsyncSession:
+        return AsyncSession(impersonate="chrome", proxy=self._proxy, timeout=self._timeout)
+
+    async def get(self, url: str, **kwargs):
+        try:
+            return await self._session.get(url, **kwargs)
+        except RequestException:
+            await self._session.close()
+            self._session = self._new_session()
+            return await self._session.get(url, **kwargs)
+
+    async def close(self) -> None:
+        await self._session.close()
